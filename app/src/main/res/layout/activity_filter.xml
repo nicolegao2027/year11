@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back to Home"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CO₂ Emissions by Year"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a year to view the highest polluter:"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/selectedYearText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selected Year: 2020"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp"
+            android:textColor="#2E7D32" />
+
+        <Spinner
+            android:id="@+id/yearSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="32dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:dropDownHeight="400dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Available years: Recent years (2010-2020), every 5 years (1900-2005), every 10 years (1800-1890), key historical years (1750-1775)"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Results Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Results:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="#1976D2" />
+
+            <TextView
+                android:id="@+id/topCountryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Highest Emitter: Loading..."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="#D32F2F" />
+
+            <TextView
+                android:id="@+id/topEmissionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CO₂ Emissions: Loading..."
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#F57C00" />
+
+            <TextView
+                android:id="@+id/totalEmissionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total World Emissions: Loading..."
+                android:textSize="14sp"
+                android:textColor="#616161" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This shows the country with the highest CO₂ emissions for the selected year, along with total world emissions."
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

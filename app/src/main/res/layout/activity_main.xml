@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header Banner -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CO₂ Emission Tracker"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp" />
+
+    <!-- Search Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search for a Country"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter country name and press Enter"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/filterByYearButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter by Year (1750-2020)"
+            android:textSize="16sp"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <!-- Top 10 Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/top10TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Top 10 Pollutors in 2020"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:textColor="#D32F2F" />
+
+        <ListView
+            android:id="@+id/top10ListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#E0E0E0"
+            android:dividerHeight="1dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+    <!-- Status Section -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:background="#F5F5F5"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
